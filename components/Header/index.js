@@ -10,39 +10,40 @@
 // And add it to the DOM in the .header-container component
 
 function Header() {
-
-//New Element
-const header = document.createElement("div");
-const date = document.createElement("span");
-const  headerh1 = document.createElement("h1");
-const  temp = document.createElement("span");
-
-// CLASS NAMES
-
-header.classList.add("header");
-date.classList.add('date');
-temp.classList.add("temp");
-
-//Text Content
-
-date.textContent = "MARCH 28, 2019";
-headerh1.textContent = "Lambda Times";
-temp.textContainer = "98°";
-
-// Structure Elements
-
-header.appendChild(date);
-header.appendChild(headerh1);
-header.appendChild(temp);
-    return header
+ 
+    //  Created the NEW ELEMENT
+     const header = document.createElement("div");
+     const date = document.createElement("span");
+     const headerh1 = document.createElement("h1");
+     const temp = document.createElement("span");
+     
+    // CLASS NAMES
+     
+    header.classList.add("header");
+    date.classList.add("date");
+    temp.classList.add("temp");
+     
+     
+// Text Content found on header
+     
+    date.textContent = "March 28, 2019";
+    headerh1.textContent = "Lambda Times";
+    temp.textContent = "98°";
+     
+     // appended structure
+     
+    header.appendChild(date);
+    header.appendChild(headerh1);
+    header.appendChild(temp);
+     
+     return header
+     
 }
-
-
-//  created the .headerContainer here
- 
-const headerContainer = document.querySelector(".header-container");
- 
-console.log(headerContainer);
-
-// Here is where i appended header to headerContainer div
-headerContainer.appendChild(Header());
+     
+     //  This the headerContainer
+     
+    const headerContainer = document.querySelector(".header-container");
+    console.log(headerContainer);
+     
+    //  Here is where i appended Parent/ Child div
+     headerContainer.appendChild(Header());
